@@ -5,14 +5,11 @@ function FilterTerorist(props) {
     setSearchAttack,
     setStatus,
     setMostDangerousActive,
-    mostDangerousActive
+    mostDangerousActive,
   } = props;
 
   const handleClickDangerous = () => {
-    console.log(mostDangerousActive);
-    
     setMostDangerousActive(!mostDangerousActive);
-    console.log(mostDangerousActive);
   };
   const handleChangeName = (e) => {
     const value = e.target.value;
@@ -64,7 +61,9 @@ function FilterTerorist(props) {
           );
         })}
       </select>
-      <button onClick={(e) => handleClickDangerous()}>Most Dangerous Terrorist</button>
+      <button onClick={(e) => handleClickDangerous()}>
+        Most Dangerous Terrorist
+      </button>
     </div>
   );
 }
